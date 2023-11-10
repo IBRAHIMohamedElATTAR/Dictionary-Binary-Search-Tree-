@@ -1,0 +1,39 @@
+   Dictionary Management System Readme
+Introduction
+This C++ program serves as a Dictionary Management System, employing a binary search tree to efficiently organize and retrieve words. The primary functionalities include inserting, looking up, and removing words, complemented by the ability to print the dictionary's size. Users interact with the program through a console-based menu, facilitating a seamless experience.
+File Structure
+The project is organized into three main files: dictionary.h, dictionary.cpp, and main.cpp, supported by a Makefile for compilation. This structure enhances modularity, readability, and maintainability.
+1. dictionary.h: Contains class and function declarations, serving as an interface for external code.
+2. dictionary.cpp: Implements the Dictionary class methods, handling the actual functionality of the dictionary.
+3. main.cpp: Houses the main function and orchestrates program execution, interacting with the user through the console menu.
+4. Makefile: Provides a simple compilation mechanism for the program.
+Usage
+Users can compile the program using the provided Makefile (make), followed by execution (./dictionary). The program then guides users through actions, including word insertion, lookup, removal, and size retrieval, all via the console menu.
+Dictionary Class
+The Dictionary class manages the overall functionality of the dictionary. Its constructor reads words from a file and inserts them into the binary search tree. Key methods include:
+* insert(string word): Inserts a word into the dictionary.
+* lookup(string word): Searches for a word in the dictionary and suggests alternatives if not found.
+* remove(string word): Removes a word from the dictionary.
+* size(): Retrieves the size (number of nodes) of the dictionary.
+TreeType Class
+The TreeType class encapsulates the binary search tree operations. Key methods include:
+* MakeEmpty(): Empties the binary search tree.
+* IsEmpty() const: Checks if the tree is empty.
+* IsFull() const: Checks if the tree is full.
+* NumberOfNodes() const: Returns the number of nodes in the tree.
+* RetrieveItem(T&, bool& found): Retrieves an item from the tree.
+* RetrieveItemV2(T&, bool& found, T &prev, T &next): Retrieves an item and suggests alternatives if not found.
+* InsertItem(T, bool& alreadyExist): Inserts an item into the tree.
+* DeleteItem(T, bool& found): Deletes an item from the tree.
+* ResetTree(OrderType): Resets the tree for a specific traversal order.
+* GetNextItem(T&, OrderType, bool&): Gets the next item in the specified order.
+* PrintTree() const: Prints the tree.
+TreeNode Structure
+The TreeNode<T> structure represents a node in the binary search tree, encapsulating the value and pointers to the left and right children.
+Main Function
+The main function initializes the dictionary from a file, provides a user-friendly menu, and handles user inputs for dictionary operations. It enhances user experience through clear instructions and error handling.
+Note
+* The program assumes that the input file (dictionary.txt) contains one word per line.
+* Word comparison is case-sensitive in the current implementation.
+This project is designed for flexibility, allowing users to modify and extend the code based on specific requirements. Its modular structure promotes easy adaptation and integration into different contexts.
+
